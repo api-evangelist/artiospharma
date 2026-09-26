@@ -1,23 +1,66 @@
 aid: artiospharma
+
 name: Artiospharma
-description: 'Artiospharma is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://www.artios.com/wp-content/uploads/2022/03/artios-banner.jpg
+
+description: 'Artios Pharma is a clinical‑stage oncology company focused on DNA Damage Response (DDR) medicines. It develops novel cancer therapies targeting DDR pathways, aiming to deliver meaningful survival benefits to patients with limited treatment options. The company’s pipeline includes ATR inhibitor alnodesertib, Pol Theta inhibitor ART6043, and DDR‑i‑ADC ART21934, supported by a strong scientific team and investors.'
+
 url: https://raw.githubusercontent.com/api-evangelist/artiospharma/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- Oncology
+- Biotechnology
+- DDR
+- Clinical-stage
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/artiospharma-hosts.yml
+- type: DomainSecurity
+  url: security/artiospharma-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/artiospharma
+  url: https://www.artios.com
+- type: TermsOfService
+  url: https://www.artios.com/terms-and-conditions/
+- type: PrivacyPolicy
+  url: https://www.artios.com/privacy-policy/
+- type: Contact
+  url: https://www.artios.com/contact-us/
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: The company provides biotech products and has no public developer API.
+  evidence:
+    - url: https://www.artios.com
+      status: 200
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
